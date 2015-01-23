@@ -1,0 +1,8 @@
+before_install:
+  - yes | sudo add-apt-repository ppa:ubuntu-sdk-team/ppa 
+  - sudo apt-get update -qq
+  - yes | sudo apt-get install qtdeclarative5-dev
+
+script:
+  - qmake -qt=qt5 libtrkfileio.pro -r "CONFIG+=release"
+  - make

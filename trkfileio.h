@@ -7,6 +7,8 @@
 #include <vector>
 #include <stdint.h>
 #include <assert.h>
+#include <string.h>
+#include <stdlib.h>
 #include "defs.h"
 using namespace std;
 
