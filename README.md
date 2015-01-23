@@ -1,6 +1,8 @@
 Introduction
 =========
 
+[![Build Status](https://travis-ci.org/lheric/libtrkfileio.svg?branch=master)](https://travis-ci.org/lheric/libtrkfileio)
+
 TrkFileIO contains reader and writer for *.trk file defined in http://www.trackvis.org/docs/?subsect=fileformat
 
 Requirements
