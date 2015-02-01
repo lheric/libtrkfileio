@@ -17,3 +17,5 @@ CONFIG(debug, debug|release){
 CONFIG(release, debug|release){
     TARGET = TrkFileIO
 }
+
+DESTDIR = $${OUT_PWD}

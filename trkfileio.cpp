@@ -77,7 +77,7 @@ void TrkFileReader::close()
 
 bool TrkFileReader::readTrack(int iTrkIdx, vector<float> &points)
 {
-    map<int32_t,TrkInfo>::iterator it = m_cRandomAccessMap.find(iTrkIdx);
+    map<int32_t,TrkInfo>::iterator& it = m_cRandomAccessMap.find(iTrkIdx);
     if( it ==  m_cRandomAccessMap.end() )
         return false;
     TrkInfo& cTrkInfo = it->second;
