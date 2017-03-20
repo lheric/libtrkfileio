@@ -23,9 +23,9 @@ int main()
 
     /// random sampling (0.1%)
     vector<float> cTrk;
-    int iTotalTrackNum = cReader.getTotalTrkNum();  /// total number of tracks in input file
-    srand(time(nullptr));                           /// random seed
-    for(int i = 0; i < iTotalTrackNum; i++)
+    size_t iTotalTrackNum = cReader.getTotalTrkNum();  /// total number of tracks in input file
+    srand(unsigned int(time(nullptr)));                           /// random seed
+    for(size_t i = 0; i < iTotalTrackNum; i++)
     {
         if( rand() % 1000 < 998 )   /// 0.1% random sampling
             continue;

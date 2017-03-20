@@ -75,9 +75,9 @@ void TrkFileReader::close()
     m_cFile.close();
 }
 
-bool TrkFileReader::readTrack(int iTrkIdx, vector<float> &points)
+bool TrkFileReader::readTrack(size_t iTrkIdx, vector<float> &points)
 {
-    map<int32_t,TrkInfo>::iterator it = m_cRandomAccessMap.find(iTrkIdx);
+    map<int32_t,TrkInfo>::iterator it = m_cRandomAccessMap.find(static_cast<int32_t>(iTrkIdx));
     if( it ==  m_cRandomAccessMap.end() )
         return false;
     TrkInfo& cTrkInfo = it->second;
@@ -225,7 +225,7 @@ bool TrkFileWriter::appendTrack(vector<float> &points)
     m_cFile.seekp(0, ios::end);
 
     /// write total point number in this track
-    int32_t iTotalPoint = points.size()/3;
+    int32_t iTotalPoint = static_cast<int32_t>(points.size()/3);
     m_cFile.write((char*)&iTotalPoint, sizeof(int32_t));
 
     /// write the points

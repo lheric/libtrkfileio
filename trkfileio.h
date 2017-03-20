@@ -92,7 +92,7 @@ public:
      * @param points
      * @return
      */
-    bool readTrack(int iTrkIdx, vector<float>& points);
+    bool readTrack(size_t iTrkIdx, vector<float>& points);
 
     /**
      * @brief readPoint Read one point in the track
